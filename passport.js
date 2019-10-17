@@ -3,12 +3,12 @@ const LocalStrategy=require('passport-local').Strategy
 const Users=require('./models/tablesCreater').Users
 
 
-passport.use(new LocalStrategy((username,password,done)=>{
-    console.log(username)
+passport.use(new LocalStrategy((email,password,done)=>{
+    console.log(email)
     console.log(password)
     Users.findOne({
         where:{
-            username:username
+           email : email
         }
     })
         .then(reluser=>{
@@ -22,7 +22,7 @@ passport.use(new LocalStrategy((username,password,done)=>{
                 //res.redirect('/login')
             }
             else{
-                console.log('WE HAVE FOUND '+reluser.username)
+                console.log('WE HAVE FOUND '+reluser.fullname)
                 //res.send('Welcome '+reluser.firstname)
                 //res.redirect('/shopnow')
                 return done(null,reluser,{message:"Success"})
