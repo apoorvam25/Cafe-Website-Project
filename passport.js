@@ -3,12 +3,12 @@ const LocalStrategy=require('passport-local').Strategy
 const Users=require('./models/tablesCreater').Users
 
 
-passport.use(new LocalStrategy((email,password,done)=>{
-    console.log(email)
+passport.use(new LocalStrategy((username,password,done)=>{
+    console.log(username)
     console.log(password)
     Users.findOne({
         where:{
-           email : email
+           username : username
         }
     })
         .then(reluser=>{

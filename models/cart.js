@@ -40,7 +40,7 @@ const UsersCart=sequelize.define('UsersCart',{
     
 
 UsersCart.sync({force:true}).then(()=>{
-    console.log('Synced to mycart')
+    console.log('Synced to my cart')
 })
 
 sequelize.authenticate().then(()=>{

@@ -38,13 +38,6 @@ app.get('/menu' , (req,res) => {
     res.render('menu')
 })
 
-app.get('/login', (req,res)=> {
-    res.render('login')
-})
-
-app.get('/signup', (req,res) => {
-    res.render('signup')
-})
 app.listen( 4000, () => {
     console.log("Server Connected")
 })

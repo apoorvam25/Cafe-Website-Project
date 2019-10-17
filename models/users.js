@@ -12,7 +12,7 @@ const sequelize = new Sequelize({
         primaryKey:true,
     },
 
-    email:{
+    username:{
         type:Sequelize.STRING,
         allowNull:false,
     },

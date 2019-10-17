@@ -44,9 +44,13 @@
           ACCOUNT
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          {{#if currentUser}}
+           <a class="dropdown-item" href="/mycart">MY CART</a>
+           <a class="dropdown-item" href="/logout">LOG OUT</a>
+          {{/if}}
           <a class="dropdown-item" href="/login">LOGIN</a>
           <a class="dropdown-item" href="/signup">SIGN UP</a>
-          <a class="dropdown-item" href="/logout">LOG OUT</a>
+         
         </div>
       </li>
        <li class="nav-item">

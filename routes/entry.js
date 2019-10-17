@@ -50,7 +50,7 @@ route.post('/login',function (req,res,next){
 
 route.post('/signup',(req,res)=>{
     Users.create({
-        email:req.body.email,
+        username:req.body.username,
         password:req.body.password,
         fullname:req.body.fullname,
         mobilenumber:req.body.mobilenumber
