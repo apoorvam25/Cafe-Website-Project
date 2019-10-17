@@ -1,0 +1,19 @@
+.row>div{
+    border:1px solid black;
+}
+.delete-btn{
+    Cursor: pointer;
+}
+.local{
+    margin-left: 120px;
+}
+.quant{
+    width:25px;
+}
+form{
+    float:left;
+}
+.local2{
+    margin-left: 550px;
+    margin-top: 50px;
+}

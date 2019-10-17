@@ -28,7 +28,7 @@ const sequelize = new Sequelize({
     },
 
     mobilenumber:{
-        type:Sequelize.INTEGER,
+        type:Sequelize.STRING,
         allowNull:false,
     },
 

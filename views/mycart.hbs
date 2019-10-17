@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Cart</title>
+     <link rel="stylesheet"  href=" ../styles/mycart.css" > 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Crushed' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Anaheim' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+
+</head>
+<body>
+    {{>navbar}}
+    <table class='local'>
+        <thead>
+            <tr>
+                <th style="width:200px"></th>
+                <th style="width:200px text-align:center">Item</th>
+                <th style="width:70px">Quantity</th>
+                <th style="width:150px"></th>
+                <th style="width:200px">Amount</th>            
+            </tr>
+        </thead>
+        {{#each arr}}
+            <tr>
+                <td style="width:200px text-align:center">
+                    <img src={{imgurl}} width='100px'>
+                </td>
+                <td style="width:200px">
+                  {{title}}  
+                </td>
+                <td style="width:70px text-align:center">
+                  {{UsersCart.quantity}}
+                </td>
+                <td style="150px">
+
+                  <form method="POST" action="/increasequantity/{{id}}"><button class="quant">+</button></form>
+                  <form method="POST" action="/decreasequantity/{{id}}"><button class="quant"> - </button></form>
+                </td>
+                <td style="width:200px">
+                    {{UsersCart.amount}}
+                </td>
+                <td style="width:200px">
+                    <form method="POST" action="/removefromcart/{{id}}">
+                        <button class='btn-secondary'>Remove From Cart</button>
+                    </form>
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+
+    <form method="GET" action="/buynow">
+        <button class="btn btn-secondary btn-lg local2">Buy Now</button>
+    </form>
+
+    
+</body>
+</html>

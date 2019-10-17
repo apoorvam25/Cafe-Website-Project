@@ -14,7 +14,7 @@ route.get('/ordernow',(req,res)=>{
         Items.findAll().then(function (users){
             let arr=users.map(u => u.get({plain: true}))
             //console.log(arr)
-            res.render('order-online',{arr,currentUser:req.user})
+            res.render('orderonline',{arr,currentUser:req.user})
             //res.sendStatus(200)
         });
     // }
