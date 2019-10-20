@@ -32,13 +32,10 @@ const UsersCart=sequelize.define('UsersCart',{
         through:UsersCart,
     })
 
-
-
     Items.belongsToMany(Users,{
         through:UsersCart,
     })
     
-
 UsersCart.sync({force:true}).then(()=>{
     console.log('Synced to my cart')
 })

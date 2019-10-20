@@ -70,7 +70,6 @@ route.get('/addtocart/:id',(req,res)=>{
             }
         }).then(relitem=>{
             reluser.addItems(relitem,{through:{amount:relitem.price}})
-            console.log(relitem)
         })
     })
     // Items.findOne({

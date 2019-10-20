@@ -2,10 +2,9 @@ const Users=require('./users').Users
 const syncfunc=require('./users').function
 const sequelize=require('./users').sequelize
 
-const Items=require('./foodItems').Items
-const syncfuncItems=require('./foodItems').function
-const sequelizeItems=require('./foodItems').sequelize
-
+const Items=require('./items').Items
+const syncfuncItems=require('./items').function
+const sequelizeItems=require('./items').sequelize
 
 
 syncfunc(Users).then(()=>{
@@ -88,5 +87,5 @@ sequelize.authenticate().then(()=>{
 
 module.exports={
     Users,
-    Items,
+    Items
     }

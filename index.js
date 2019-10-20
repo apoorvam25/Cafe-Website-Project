@@ -23,19 +23,19 @@ app.use(exitroute)
 app.use(paymentroute)
 
 app.get('/' , (req,res) => {
-res.render('cover')}
-)
+res.render('cover',{currentUser:req.user})
+})
 
 app.get('/cover' , (req,res) => {
-    res.render('cover')}
-    )
+    res.render('cover',{currentUser:req.user})
+})
 
 app.get('/ourstory' , (req,res) => {
-    res.render('ourstory')
+    res.render('ourstory',{currentUser:req.user})
 })
 
 app.get('/menu' , (req,res) => {
-    res.render('menu')
+    res.render('menu',{currentUser:req.user})
 })
 
 app.listen( 4000, () => {

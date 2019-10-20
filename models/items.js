@@ -6,7 +6,7 @@ const sequelize=new Sequelize({
     storage:'./databases/tables.sqlite'
 })
 
-const Items=sequelize.define('fooditems',{
+const Items=sequelize.define('items',{
     id:{
         type:Sequelize.INTEGER,
         primaryKey:true,
@@ -23,6 +23,10 @@ const Items=sequelize.define('fooditems',{
     },
     description:{
         type:Sequelize.STRING,
+    },
+    updatedAt:{
+        type:Sequelize.STRING,
+        defaultValue:"Last updated 3 mins ago"
     }
 })
 
