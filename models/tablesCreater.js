@@ -72,10 +72,11 @@ syncfunc(Users).then(()=>{
             
             }
         
-        ])
-    })
+        ]).then( () => {
+            console.log("Inserted into Fooditems")
+        })
 })
-
+})
 
 sequelizeItems.authenticate().then(()=>{
     console.log('Connected to Items')
@@ -87,5 +88,5 @@ sequelize.authenticate().then(()=>{
 
 module.exports={
     Users,
-    Items
+    Items,
     }

@@ -4,7 +4,7 @@ const Items=require('./tablesCreater').Items
 
 const sequelize=new Sequelize({
     dialect:'sqlite',
-    storage:'./databases/tables.sqlite'
+    storage:'./db.sqlite'
 })
 
 const UsersCart=sequelize.define('UsersCart',{
@@ -23,10 +23,6 @@ const UsersCart=sequelize.define('UsersCart',{
         defaultValue:0,
     }
 })
-
-// Users.hasMany(Items)
-// Items.hasMany(Users)
-
 
     Users.belongsToMany(Items,{
         through:UsersCart,
