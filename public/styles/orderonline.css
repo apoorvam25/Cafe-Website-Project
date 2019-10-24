@@ -30,3 +30,17 @@ font-size: 60px;
 .heading{
   font-family: 'Crushed';
 }
+
+.outer{
+  text-align: center;
+}
+
+.inner{
+  display: inline-block;
+  text-align: normal;
+  
+}
+
+.media{
+  justify-content: center;
+}

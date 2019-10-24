@@ -23,6 +23,9 @@ const Items=sequelize.define('items',{
     },
     description:{
         type:Sequelize.STRING,
+    },
+    type :{
+        type : Sequelize.STRING
     }
 })
 

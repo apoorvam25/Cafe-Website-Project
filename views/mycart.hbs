@@ -18,38 +18,53 @@
     <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
 
 </head>
+
+<style>
+    .th{
+        font-family: 'Anaheim';
+    }
+
+    .td{
+        font-family: 'Crushed';
+    }
+</style>
+
 <body>
     {{>navbar}}
     <div class="container-fluid bgimg">
 <h1 class="title">MY CART</h1>
 </div> 
-    <table class='local'>
-        <thead>
+<br>
+<br>
+<br>
+<br>
+    <table class="local table">
+        <thead class = "thead-dark">
             <tr>
-                <th style="width:200px"></th>
-                <th style="width:200px text-align:center">Item</th>
-                <th style="width:70px">Quantity</th>
-                <th style="width:150px"></th>
-                <th style="width:200px">Amount</th>            
+                <th style="width:100px"></th>
+                <th style="width:100px text-align:center">Item</th>
+                <th style="width:50px">Quantity</th>
+                <th style="width:100px"></th>
+                <th style="width:50px">Amount</th>            
             </tr>
         </thead>
         {{#each arr}}
             <tr>
-                <td style="width:200px text-align:center">
+                <td style="width:250px text-align:center">
                     <img src={{imgurl}} width='100px'>
                 </td>
-                <td style="width:200px">
+                <td style="width: 100px ">
                   {{title}}  
                 </td>
                 <td style="width:70px text-align:center">
                   {{UsersCart.quantity}}
                 </td>
-                <td style="150px">
+                <td style="100px">
 
                   <form method="POST" action="/increasequantity/{{id}}"><button class="quant">+</button></form>
                   <form method="POST" action="/decreasequantity/{{id}}"><button class="quant"> - </button></form>
                 </td>
-                <td style="width:200px">
+                <td style="width:40px">
                     {{UsersCart.amount}}
                 </td>
                 <td style="width:200px">

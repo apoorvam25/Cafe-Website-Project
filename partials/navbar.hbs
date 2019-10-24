@@ -31,7 +31,7 @@
         <a class="nav-link" href="#">RESERVATION</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="#">SHOP</a>
+        <a class="nav-link" href="/login">SHOP</a>
       </li>
          <li class="nav-item">
         <a class="nav-link" href="#">CONTACT US</a>
@@ -47,10 +47,10 @@
           {{#if currentUser}}
            <a class="dropdown-item" href="/mycart">MY CART</a>
            <a class="dropdown-item" href="/logout">LOG OUT</a>
-          {{/if}}
+          {{else}}
           <a class="dropdown-item" href="/login">LOGIN</a>
           <a class="dropdown-item" href="/signup">SIGN UP</a>
-         
+         {{/if}}
         </div>
       </li>
        <li class="nav-item">
