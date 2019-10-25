@@ -44,8 +44,6 @@ route.get('/addtocart/:id',(req,res)=>{
         res.redirect('/ordernow')
     })
 
-
-
 })
 
 route.post('/removefromcart/:itemid',(req,res)=>{
