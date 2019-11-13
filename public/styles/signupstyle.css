@@ -1,7 +1,72 @@
 #signup-div{
     width:500px;
-    height:600px;
+    height:450px;
     display:block;
     margin-left:33%;
-    margin-top:3%;
+    margin-top:8%;
+    background-color:whitesmoke;
+    border-radius: 25px;
+}
+
+input[type=text]
+{
+width: 80%;
+box-sizing: border-box;
+border: 2px solid gray;
+border-radius: 4px;
+font-size: 16px;
+background-color: white;
+/* background-image: url('/user.png'); */
+background-position: 10px 10px; 
+background-repeat: no-repeat;
+padding: 12px 20px 12px 40px;
+margin: auto;
+display: block;
+}
+
+input[type=tel]
+{
+width: 80%;
+box-sizing: border-box;
+border: 2px solid gray;
+border-radius: 4px;
+font-size: 16px;
+background-color: white;
+/* background-image: url('/user.png'); */
+background-position: 10px 10px; 
+background-repeat: no-repeat;
+padding: 12px 20px 12px 40px;
+margin: auto;
+display: block;
+}
+
+input[type= username]
+{
+width: 80%;
+box-sizing: border-box;
+border: 2px solid gray;
+border-radius: 4px;
+font-size: 16px;
+background-color: white;
+/* background-image: url('/user.png'); */
+background-position: 10px 10px; 
+background-repeat: no-repeat;
+padding: 12px 20px 12px 40px;
+margin: auto;
+display: block;
+}
+input[type= password]
+{
+width: 80%;
+box-sizing: border-box;
+border: 2px solid gray;
+border-radius: 4px;
+font-size: 16px;
+background-color: white;
+/* background-image: url('/user.png'); */
+background-position: 10px 10px; 
+background-repeat: no-repeat;
+padding: 12px 20px 12px 40px;
+margin: auto;
+display: block;
 }

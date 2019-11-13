@@ -16,22 +16,29 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
+<style>
+  body {
+  background-image: url('/Front1blur.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover;
+}
+</style>
 
 <body>
     {{>navbar}}
- <div id='login-div'>
-   <h1 class='display-4'>Login Here!</h1>
-        <br>
+ <div id='login-div' >
+    <center><i class = "fa fa-user fa-5x"></i></center> 
         <form method="POST" action="/login">
+        <br>
   <div class="form-group">
-    <label>Username</label>
-    <input type="username" class="form-control"  placeholder="Username" name="username">
+    <input type="username" class="form-control"  placeholder="Username" name="username" >
   </div>
+  <br>
   <div class="form-group">
-    <label>Password</label>
-    <input type="password" class="form-control" placeholder="Password" name="password">
+    <input type="password" class="form-control" placeholder="Password" name="password" width="50%">
   </div>
-  <button id='submit-btn'>Login</button>
+  <button id='submit-btn' style="display: block; margin: 0 auto;" >Login</button>
 </form>
 </div>
 </body>

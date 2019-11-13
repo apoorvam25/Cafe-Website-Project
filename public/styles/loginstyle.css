@@ -1,9 +1,43 @@
   
   #login-div{
-    width:400px;
-    height:500px;
-    position: fixed;
+    width:600px;
+    height:320px;
+    position: fixed; 
     top:30%;
-    left:35%
+    left:30%;
+    background-color:whitesmoke;
+    border-radius: 25px;
     
+}
+
+input[type=username]
+{
+width: 80%;
+box-sizing: border-box;
+border: 2px solid gray;
+border-radius: 4px;
+font-size: 16px;
+background-color: white;
+/* background-image: url('/user.png'); */
+background-position: 10px 10px; 
+background-repeat: no-repeat;
+padding: 12px 20px 12px 40px;
+margin: auto;
+display: block;
+}
+
+input[type=password]
+{
+width: 80%;
+box-sizing: border-box;
+border: 2px solid gray;
+border-radius: 4px;
+font-size: 16px;
+background-color: white;
+background-image: url('fa fa-user');
+background-position: 10px 10px; 
+background-repeat: no-repeat;
+padding: 12px 20px 12px 40px;
+margin: auto;
+display: block;
 }
