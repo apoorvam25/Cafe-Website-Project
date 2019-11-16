@@ -35,7 +35,6 @@ route.post('/login',function (req,res,next){
             }
         }
         else{
-            // res.redirect('/shopnow')
             req.logIn(user,(err)=>{
                 if(err){
                     return console.log(err)

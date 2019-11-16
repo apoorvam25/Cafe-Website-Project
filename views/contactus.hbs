@@ -4,46 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Order Online</title>
+    <title>Contact Us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet"  href=" ../styles/orderonline.css" > 
+    <link rel="stylesheet"  href=" ../styles/contactstyle.css" > 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Crushed' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Anaheim' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Dr Sugiyama' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
 </head>
-
 <body>
 {{>navbar}}
-<div class="container-fluid bgimg ">
-<h1 class="title">ORDER ONLINE</h1>
+<div class="container-fluid bgimg">
+<h1 class="title">OUR CONTACT INFO</h1>
 </div> 
+{{!End of Title Div}}
 <br>
 <br>
 <br>
-<div class="row justify-content-center">
-<div class="card-deck">
-  {{#each arr}}
-  <div class="col-auto mb-3">  
-  <div class="card text-white bg-dark " style=" width : 15rem;">
-    <img src="{{imgurl}}" height= "150" width="150" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{title}}</h5>
-      <p class="card-text">Rs. {{price}}</p>
-      <form method='GET' action='/addtocart/{{id}}'>
-        <button class="btn btn-secondary">Add to Cart</button>  
-      </form>
+<br>
+<center> 
+<ul class="list-unstyled">
+  <li class="media">
+    <div class="media-body">
+      {{!-- <h5 class="mt-0 mb-1">List-based media object</h5> --}}
+      <i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
+      E-19A, Main Market , South Extension 2, New Delhi
     </div>
-  </div>
-  </div>
-{{/each}}
-</div>
-</div>
+  </li>
+  <li class="media my-4">
+    <div class="media-body">
+        <i class="fa fa-envelope fa-3x align-self-center"></i>
+      {{!-- <h5 class="mt-0 mb-1">List-based media object</h5> --}}
+        support@yourdomain.com
+    <br>
+    info@yourdomain.com
+    </div>
+  </li>
+  <li class="media">
+     
+    <div class="media-body">
+         <i class="fa fa-phone fa-3x"></i>
+      {{!-- <h5 class="mt-0 mb-1">List-based media object</h5> --}}
+     +(91)9819632678
+     <br>
+     +(91)9765432109
+    </div>
+  </li>
+</ul>
+</center> 
+
 </body>
 </html>

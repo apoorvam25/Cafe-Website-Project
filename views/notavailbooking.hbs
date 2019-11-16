@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Order Online</title>
+    <title>Reserve a Table</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet"  href=" ../styles/orderonline.css" > 
+    <link rel="stylesheet"  href=" ../styles/reservestyle.css" >  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Crushed' rel='stylesheet'>
@@ -20,30 +20,29 @@
 </head>
 
 <body>
-{{>navbar}}
-<div class="container-fluid bgimg ">
-<h1 class="title">ORDER ONLINE</h1>
-</div> 
-<br>
-<br>
-<br>
-<div class="row justify-content-center">
-<div class="card-deck">
-  {{#each arr}}
-  <div class="col-auto mb-3">  
-  <div class="card text-white bg-dark " style=" width : 15rem;">
-    <img src="{{imgurl}}" height= "150" width="150" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{title}}</h5>
-      <p class="card-text">Rs. {{price}}</p>
-      <form method='GET' action='/addtocart/{{id}}'>
-        <button class="btn btn-secondary">Add to Cart</button>  
-      </form>
-    </div>
+    {{>navbar}}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+   <div class="col d-flex justify-content-center">
+<div class="card text-center">
+  <div class="card-header">
+    <bold></bold>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title" style= " font-family : 'Anaheim'"><bold>Sorry, All Tables Booked!</bold></h5>
+          <a class="btn btn-primary btn-lg" href="/reserve" role="button">Go Back</a>
   </div>
   </div>
-{{/each}}
-</div>
 </div>
 </body>
 </html>

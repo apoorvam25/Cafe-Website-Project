@@ -22,7 +22,6 @@ route.get('/ordernow',(req,res)=>{
 
 })
 
-
 // sequelize.authenticate().then(()=>{
 //     console.log('Connected to products db')
 // })

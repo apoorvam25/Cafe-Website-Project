@@ -1,0 +1,29 @@
+.title{
+    text-align: center;
+     color: azure;
+     font-family: 'Crushed';
+     font-size: 60px;
+    }
+  
+    .bgimg{
+      background-image : url("/divbg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: 130px;
+      height : 100%;
+      padding-top: 150px;
+      padding-bottom: 150px;
+      padding-left: 50px;
+      padding-right: 50px;
+      
+  }
+  
+  .media-body{
+      font-family: 'Architects Daughter';
+      font-size : 20px;
+      width : 20px;
+  }
+
+  .media{
+      justify-content: center;
+  }

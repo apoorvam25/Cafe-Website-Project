@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Order Online</title>
+    <title>Reserve a Table</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet"  href=" ../styles/orderonline.css" > 
+    <link rel="stylesheet"  href=" ../styles/reservestyle.css" >  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Crushed' rel='stylesheet'>
@@ -22,28 +22,26 @@
 <body>
 {{>navbar}}
 <div class="container-fluid bgimg ">
-<h1 class="title">ORDER ONLINE</h1>
-</div> 
-<br>
-<br>
-<br>
-<div class="row justify-content-center">
-<div class="card-deck">
-  {{#each arr}}
-  <div class="col-auto mb-3">  
-  <div class="card text-white bg-dark " style=" width : 15rem;">
-    <img src="{{imgurl}}" height= "150" width="150" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{title}}</h5>
-      <p class="card-text">Rs. {{price}}</p>
-      <form method='GET' action='/addtocart/{{id}}'>
-        <button class="btn btn-secondary">Add to Cart</button>  
-      </form>
-    </div>
-  </div>
-  </div>
-{{/each}}
+<h1 class="title"> RESERVE A TABLE</h1>
 </div>
-</div>
+<br>
+<br>
+<div class="col d-flex justify-content-center"> 
+ <div class="card border-dark text-centre " style="width: 35rem;" >
+  <div class="card-header">
+  <center> Select Date and Time for your Reservation </center>
+ </div>
+  <div class="card-body">
+      <form method="POST" action="/bookatable">
+    {{!-- <h5 class="card-title"></h5> --}}
+    <br>
+   <h5 class="card-title"> Date : <input type="date" name="date" min="2019-11-16" max="2019-11-30"> </h5> 
+   <h5 class="card-title"> Time :  <input type="time" name="time" min="10:00" max="23:00"> </h5>
+  <h5 class="card-title"> People : <input type="number" name="count" min="1" max="15"> </h5>
+  <br>
+  <button id='submit-btn btn btn-secondary' style="display: block; margin: 0 auto;" >Confirm Booking</button>
+  <br>
+     </div>
+</form>
 </body>
 </html>

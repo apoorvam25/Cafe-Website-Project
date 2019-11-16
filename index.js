@@ -15,12 +15,16 @@ const itemsroute=require('./routes/products.js')
 const cartroute=require('./routes/carthandler.js')
 const exitroute=require('./routes/exit.js')
 const paymentroute=require('./routes/payment.js')
+const tableroute=require('./routes/tablereserve.js')
+const bookingroute=require('./routes/bookings.js')
 
 app.use(entryroute.route)
 app.use(itemsroute)
 app.use(cartroute)
 app.use(exitroute)
 app.use(paymentroute)
+app.use(tableroute)
+app.use(bookingroute.route)
 
 app.get('/' , (req,res) => {
 res.render('cover',{currentUser:req.user})
@@ -36,6 +40,10 @@ app.get('/ourstory' , (req,res) => {
 
 app.get('/menu' , (req,res) => {
     res.render('menu',{currentUser:req.user})
+})
+
+app.get('/contactus' , (req,res) => {
+    res.render('contactus',{currentUser:req.user})
 })
 
 app.listen( 4000, () => {
